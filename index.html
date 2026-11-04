@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JYP x Stray Kids TikTok Live Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <div class="left-panel">
+      
+      <div class="brand-header">
+        <div class="brand-branding-group">
+          <span class="jyp-text-logo">JYP</span>
+          <span class="brand-separator">|</span>
+          <div class="skz-official-logo">
+            Stray<span class="red-k">K</span>ids
+          </div>
+        </div>
+        <button id="themeBtn" class="btn-theme" title="Cambiar Tema">🌙</button>
+      </div>
+
+      <div class="section-box">
+        <label>Filtrar Catálogo por Categoría:</label>
+        <div class="filter-bar">
+          <button class="btn-filter active" onclick="filtrar('todos')">Todos</button>
+          <button class="btn-filter" onclick="filtrar('album')">💿 Álbumes Oficiales</button>
+          <button class="btn-filter" onclick="filtrar('skzoo')">🧸 Peluches SKZOO</button>
+          <button class="btn-filter" onclick="filtrar('tour')">🎫 Entradas & Tour</button>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>✨ Catálogo de Productos en Directo</h3>
+        <div class="product-grid" id="productGrid">
+          
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'Mixtape\' - 120 BOB', 'Mixtape')" data-categoria="album">
+            <span class="p-tag">2018</span>
+            <h4>Mixtape</h4>
+            <p>120 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'I am NOT\' - 130 BOB', 'I am NOT')" data-categoria="album">
+            <span class="p-tag">2018</span>
+            <h4>I am NOT</h4>
+            <p>130 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'I am WHO\' - 130 BOB', 'I am WHO')" data-categoria="album">
+            <span class="p-tag">2018</span>
+            <h4>I am WHO</h4>
+            <p>130 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'I am YOU\' - 135 BOB', 'I am YOU')" data-categoria="album">
+            <span class="p-tag">2018</span>
+            <h4>I am YOU</h4>
+            <p>135 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'Clé 1: MIROH\' - 140 BOB', 'Clé 1: MIROH')" data-categoria="album">
+            <span class="p-tag">2019</span>
+            <h4>Clé 1: MIROH</h4>
+            <p>140 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'Clé 2: Yellow Wood\' - 140 BOB', 'Clé 2')" data-categoria="album">
+            <span class="p-tag">2019</span>
+            <h4>Clé 2: Yellow W.</h4>
+            <p>140 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'Clé: LEVANTER\' - 145 BOB', 'Clé: LEVANTER')" data-categoria="album">
+            <span class="p-tag">2019</span>
+            <h4>Clé: LEVANTER</h4>
+            <p>145 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'GO LIVE\' - 140 BOB', 'GO LIVE')" data-categoria="album">
+            <span class="p-tag">2020</span>
+            <h4>GO LIVE</h4>
+            <p>140 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'IN LIFE\' (Repackage) - 145 BOB', 'IN LIFE')" data-categoria="album">
+            <span class="p-tag">2020</span>
+            <h4>IN LIFE</h4>
+            <p>145 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'ALL IN\' (Japan Ver) - 135 BOB', 'ALL IN')" data-categoria="album">
+            <span class="p-tag">2020</span>
+            <h4>ALL IN</h4>
+            <p>135 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'NOEASY\' - 155 BOB', 'NOEASY')" data-categoria="album">
+            <span class="p-tag">2021</span>
+            <h4>NOEASY</h4>
+            <p>155 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Mini Álbum \'ODDINARY\' - 150 BOB', 'ODDINARY')" data-categoria="album">
+            <span class="p-tag">2022</span>
+            <h4>ODDINARY</h4>
+            <p>150 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'MAXIDENT\' - 160 BOB', 'MAXIDENT')" data-categoria="album">
+            <span class="p-tag">2022</span>
+            <h4>MAXIDENT</h4>
+            <p>160 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'THE SOUND\' (Japan) - 175 BOB', 'THE SOUND')" data-categoria="album">
+            <span class="p-tag">2023</span>
+            <h4>THE SOUND</h4>
+            <p>175 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'5-STAR\' - 175 BOB', '5-STAR')" data-categoria="album">
+            <span class="p-tag">2023</span>
+            <h4>5-STAR</h4>
+            <p>175 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'ROCK-STAR\' - 165 BOB', 'ROCK-STAR')" data-categoria="album">
+            <span class="p-tag">2023</span>
+            <h4>ROCK-STAR</h4>
+            <p>165 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'ATE\' - 170 BOB', 'ATE')" data-categoria="album">
+            <span class="p-tag">2024</span>
+            <h4>ATE</h4>
+            <p>170 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Álbum \'GIANT\' (Japan) - 180 BOB', 'GIANT')" data-categoria="album">
+            <span class="p-tag">2024</span>
+            <h4>GIANT</h4>
+            <p>180 BOB</p>
+          </div>
+
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO Wolf Chan (Bang Chan) - 180 BOB', 'Wolf Chan')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>Wolf Chan</h4>
+            <p>180 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO Leebit (Lee Know) - 180 BOB', 'Leebit')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>Leebit</h4>
+            <p>180 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO DWAEKKI (Changbin) - 180 BOB', 'DWAEKKI')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>DWAEKKI</h4>
+            <p>180 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO Jiniret (Hyunjin) - 180 BOB', 'Jiniret')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>Jiniret</h4>
+            <p>180 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO BbokAri (Felix) - 180 BOB', 'BbokAri')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>BbokAri</h4>
+            <p>180 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO PuppyM (Seungmin) - 180 BOB', 'PuppyM')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>PuppyM</h4>
+            <p>180 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Peluche SKZOO FoxI.Ny (I.N) - 180 BOB', 'FoxI.Ny')" data-categoria="skzoo">
+            <span class="p-tag skzoo">SKZOO</span>
+            <h4>FoxI.Ny</h4>
+            <p>180 BOB</p>
+          </div>
+
+          <div class="product-card" onclick="seleccionarProducto('Entrada Tour VIP Soundcheck - 850 BOB', 'VIP Soundcheck')" data-categoria="tour">
+            <span class="p-tag tour">Tour</span>
+            <h4>VIP Soundcheck</h4>
+            <p>850 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Entrada Tour General Floor - 450 BOB', 'General Floor')" data-categoria="tour">
+            <span class="p-tag tour">Tour</span>
+            <h4>General Floor</h4>
+            <p>450 BOB</p>
+          </div>
+          <div class="product-card" onclick="seleccionarProducto('Official Lightstick Nachimbong V2 - 350 BOB', 'Lightstick V2')" data-categoria="tour">
+            <span class="p-tag tour">Merch</span>
+            <h4>Nachimbong V2</h4>
+            <p>350 BOB</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>💬 Chat STAYs en Directo (TikTok Live)</h3>
+        <input type="text" id="userTikTokChat" placeholder="Usuario de TikTok (@stay_user)" class="input-field">
+        <div class="chat-row">
+          <input type="text" id="chatInput" placeholder="Ej: @Ale_Forever quiere el álbum ATE..." class="input-field">
+          <button id="btnSendChat" class="btn-action">Comentar</button>
+        </div>
+        <div id="logOutput" class="log-box">
+          <div>[Sistema] Chat de TikTok Live sincronizado...</div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <h3>🛒 Bitácora de Transacciones & Pedidos Confirmados</h3>
+        <form id="orderForm">
+          <label>Seleccionar Producto / Álbum / Entrada:</label>
+          <select id="variantSelect" class="input-field">
+            <option value="Álbum 'Mixtape' - 120 BOB" data-categoria="album">Álbum "Mixtape" (2018) - 120 BOB</option>
+            <option value="Álbum 'I am NOT' - 130 BOB" data-categoria="album">Álbum "I am NOT" (2018) - 130 BOB</option>
+            <option value="Álbum 'I am WHO' - 130 BOB" data-categoria="album">Álbum "I am WHO" (2018) - 130 BOB</option>
+            <option value="Álbum 'I am YOU' - 135 BOB" data-categoria="album">Álbum "I am YOU" (2018) - 135 BOB</option>
+            <option value="Álbum 'Clé 1: MIROH' - 140 BOB" data-categoria="album">Álbum "Clé 1: MIROH" (2019) - 140 BOB</option>
+            <option value="Álbum 'Clé 2: Yellow Wood' - 140 BOB" data-categoria="album">Álbum "Clé 2: Yellow Wood" (2019) - 140 BOB</option>
+            <option value="Álbum 'Clé: LEVANTER' - 145 BOB" data-categoria="album">Álbum "Clé: LEVANTER" (2019) - 145 BOB</option>
+            <option value="Álbum 'GO LIVE' - 140 BOB" data-categoria="album">Álbum "GO LIVE" (2020) - 140 BOB</option>
+            <option value="Álbum 'IN LIFE' - 145 BOB" data-categoria="album">Álbum "IN LIFE" (2020) - 145 BOB</option>
+            <option value="Álbum 'ALL IN' (Japan Ver) - 135 BOB" data-categoria="album">Álbum "ALL IN" (2020) - 135 BOB</option>
+            <option value="Álbum 'NOEASY' - 155 BOB" data-categoria="album">Álbum "NOEASY" (2021) - 155 BOB</option>
+            <option value="Mini Álbum 'ODDINARY' - 150 BOB" data-categoria="album">Mini Álbum "ODDINARY" (2022) - 150 BOB</option>
+            <option value="Álbum 'MAXIDENT' - 160 BOB" data-categoria="album">Álbum "MAXIDENT" (2022) - 160 BOB</option>
+            <option value="Álbum 'THE SOUND' - 175 BOB" data-categoria="album">Álbum "THE SOUND" (2023) - 175 BOB</option>
+            <option value="Álbum '5-STAR' - 175 BOB" data-categoria="album">Álbum "5-STAR" (2023) - 175 BOB</option>
+            <option value="Álbum 'ROCK-STAR' - 165 BOB" data-categoria="album">Álbum "ROCK-STAR" (2023) - 165 BOB</option>
+            <option value="Álbum 'ATE' - 170 BOB" data-categoria="album">Álbum "ATE" (2024) - 170 BOB</option>
+            <option value="Álbum 'GIANT' - 180 BOB" data-categoria="album">Álbum "GIANT" (2024) - 180 BOB</option>
+            <option value="Peluche SKZOO Wolf Chan (Bang Chan) - 180 BOB" data-categoria="skzoo">Peluche Wolf Chan (Bang Chan) - 180 BOB</option>
+            <option value="Peluche SKZOO Leebit (Lee Know) - 180 BOB" data-categoria="skzoo">Peluche Leebit (Lee Know) - 180 BOB</option>
+            <option value="Peluche SKZOO DWAEKKI (Changbin) - 180 BOB" data-categoria="skzoo">Peluche DWAEKKI (Changbin) - 180 BOB</option>
+            <option value="Peluche SKZOO Jiniret (Hyunjin) - 180 BOB" data-categoria="skzoo">Peluche Jiniret (Hyunjin) - 180 BOB</option>
+            <option value="Peluche SKZOO BbokAri (Felix) - 180 BOB" data-categoria="skzoo">Peluche BbokAri (Felix) - 180 BOB</option>
+            <option value="Peluche SKZOO PuppyM (Seungmin) - 180 BOB" data-categoria="skzoo">Peluche PuppyM (Seungmin) - 180 BOB</option>
+            <option value="Peluche SKZOO FoxI.Ny (I.N) - 180 BOB" data-categoria="skzoo">Peluche FoxI.Ny (I.N) - 180 BOB</option>
+            <option value="Entrada Tour VIP Soundcheck - 850 BOB" data-categoria="tour">Entrada Tour VIP Soundcheck - 850 BOB</option>
+            <option value="Entrada Tour General Floor - 450 BOB" data-categoria="tour">Entrada Tour General Floor - 450 BOB</option>
+            <option value="Official Lightstick Nachimbong V2 - 350 BOB" data-categoria="tour">Official Lightstick Nachimbong V2 - 350 BOB</option>
+          </select>
+
+          <label>Usuario de TikTok (Para confirmación de pedido):</label>
+          <input type="text" id="userTikTokOrder" placeholder="@usuario_valido" required class="input-field">
+
+          <button type="submit" class="btn-buy">Confirmar Venta en Bitácora</button>
+        </form>
+
+        <div id="logDia2" class="log-box log-sales">
+          <div>[Sistema] Esperando confirmaciones de ventas...</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="right-panel">
+      <div class="live-stream-container">
+        <div class="live-tag">🔴 TIKTOK LIVE SHOPPING</div>
+
+        <div class="stream-fallback-screen">
+          <img src="https://i.pinimg.com/1200x/91/aa/25/91aa2527a4a08e12fbc9557593ecac1f.jpg" alt="Stray Kids Official Logo" class="skz-stream-logo">
+
+          <div class="live-status-pulse">
+            <span class="dot"></span> TRANSMITIENDO EN DIRECTO
+          </div>
+          <div class="music-wave">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="live-views">👁️ 24.5K Espectadores en Vivo</div>
+        </div>
+
+        <audio id="liveAudio" loop>
+          <source src="skz_song.mp3.mpeg" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+        <button id="audioToggleBtn" class="audio-toggle-btn" title="Audio del Live">🎵 Audio del Live</button>
+      </div>
+
+      <div class="stream-info">
+        <h3>🎵 Stray Kids Official Live Store - Preventas Tour & Álbumes</h3>
+        <p>Transmisión en vivo oficial. Selecciona un producto a la izquierda o comenta tu pedido en el chat para registrar la venta en la bitácora.</p>
+        <button class="btn-like-style" data-action="like">❤️ Enviar Corazones al Live</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
